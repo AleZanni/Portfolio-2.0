@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "programmer portfolio developed by using nodejs scss javascript and html5",
+  "main": "src/main.js",
+  "scripts": {
+  "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "portfolio",
+    "nodejs",
+    "node",
+    "javascript",
+    "programmer",
+    "developer",
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "front",
+    "end",
+    "back",
+    "end"
+  ],
+  "author": "Alessandro Zanni",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
