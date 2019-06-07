@@ -10,6 +10,127 @@ html {
 
 body {
   box-sizing: border-box;
-  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.938), #f89f3ad9), url("../img/background.jpg");
+  background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), #724b1fe5), url("../img/background.jpg");
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translatex(-5rem); }
+  80% {
+    transform: translatex(1rem); }
+  100% {
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translatex(5rem); }
+  80% {
+    transform: translatex(-1rem); }
+  100% {
+    opacity: 1; } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translatey(3rem); }
+  100% {
+    opacity: 1;
+    transform: translatey(0px); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translatey(60rem); }
+  50% {
+    opacity: 1;
+    transform: translatey(33rem); }
+  100% {
+    opacity: 1;
+    transform: translatey(40rem); } }
+
+.header__text {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .header__text--h1 {
+    font-size: 8rem;
+    letter-spacing: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    display: block;
+    color: #fff; }
+  .header__text--p {
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    color: #fff;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+
+.wallet {
+  animation-name: moveInBottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in; }
+  .wallet__background {
+    padding: 15rem 13rem;
+    background-image: linear-gradient(to right bottom, rgba(241, 197, 114, 0.938), #582f00d9), url("../img/background.jpg");
+    width: 30%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: 2rem 2rem 2rem 2rem rgba(0, 0, 0, 0.5); }
+  .wallet__cards {
+    width: 25%;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .wallet__cards--1, .wallet__cards--2, .wallet__cards--3, .wallet__cards--4 {
+      padding: 1rem 2.5rem 1rem 2.5rem;
+      border-bottom: 2px solid #000000;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.938), #a5a5a5d9); }
+      .wallet__cards--1-text, .wallet__cards--2-text, .wallet__cards--3-text, .wallet__cards--4-text {
+        text-transform: uppercase;
+        left: 40%; }
+      .wallet__cards--1:hover, .wallet__cards--2:hover, .wallet__cards--3:hover, .wallet__cards--4:hover {
+        padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+        margin-top: 0; }
+
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  display: none; }
