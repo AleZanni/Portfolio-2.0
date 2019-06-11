@@ -22,7 +22,7 @@ if(birthday.isBefore(now, 'days')){
 } else {
   yearOfBirth = moment('1992')
 }
-//Calcukating the difference of time between now and my next birthday in days, years, hours, minutes, seconds
+//Calcuating the difference of time between now and my next birthday in days, years, hours, minutes, seconds
 let diff = birthday.diff(now, 'days');
 let diffYears = now.diff(yearOfBirth, 'year');
 let diffHours = birthday.diff(now,'hours');
@@ -33,3 +33,28 @@ let counter = document.getElementById('age');
 //inserting the final text into the html span
 counter.innerHTML = `I will turn ${diffYears} years old in ${diff} days || ${diffHours} hours || ${diffMinutes} minutes || ${diffSec} seconds.`;
 };
+
+//Function for making the cards go out from the wallet and display properly
+
+function walletOut(){
+    document.getElementById("beforeClick").id = "cards__animation";
+    document.getElementById("beforeClick1").id = "cards__animation";     
+    document.getElementById("beforeClick2").id = "cards__animation";     
+    document.getElementById("beforeClick3").id = "cards__animation"; 
+    
+    document.getElementById("beforeClickMain").id = "cards__grid";
+
+    document.getElementById("btn").style.visibility = "visible";
+    document.getElementById("btn").style.display = "block";
+
+    document.getElementById("btn1").style.visibility = "visible";
+    document.getElementById("btn1").style.display = "block";
+
+    document.getElementById("btn2").style.visibility = "visible";
+    document.getElementById("btn2").style.display = "block";
+
+    document.getElementById("btn3").style.visibility = "visible";
+    document.getElementById("btn3").style.display = "block";
+
+    console.log('click');
+}

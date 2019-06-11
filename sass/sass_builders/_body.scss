@@ -132,15 +132,13 @@ font-family: 'Lato', sans-serif;
   }
     &:hover{
     padding: 1.5rem 2.5rem 2.5rem 2.5rem;
-    margin-top: 0;
     }
   }
   }
 }
 
-  .btn {
+  #btn, #btn1, #btn2, #btn3 {
     text-transform: uppercase;
-    display: inline-block;
     text-decoration: none;
     padding: 1.5rem 2rem;
     border-radius: 10rem;
@@ -151,5 +149,32 @@ font-family: 'Lato', sans-serif;
     cursor: pointer;
     visibility: hidden;
     display: none;
+  }
+
+  #cards__animation {
+    padding: 9rem 7.5rem 9rem 7.5rem;
+    border-bottom: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    &:hover{
+      padding: 8rem 7.5rem 8rem 7.5rem;
+      cursor: auto;
+      margin-top: 1.5rem;
+      transform: scale(1.2);
+
+      }
+  }
+
+  #cards__grid {
+    display: inline-grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: space-evenly;
+    width: 100%;
+    top: initial;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
   }
   
