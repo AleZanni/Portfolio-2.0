@@ -25,7 +25,7 @@
             <div class="wallet__cards" id="beforeClickMain">
                 <!--Card 1-->
                 <div class="wallet__cards--1 wallet__popup" id="beforeClick" onclick="walletOut()">
-                    <div class="wallet__cards--1-text">
+                    <div class="wallet__cards--1-text" id="beforeClickText">
                         <h1 class="wallet__cards--1-text-1">
                         About me
                         </h1>
@@ -36,18 +36,18 @@
                 </div>
                 <!--Card 2-->
                 <div class="wallet__cards--2 wallet__popup" id="beforeClick1" onclick="walletOut()">
-                    <div class="wallet__cards--2-text">
+                    <div class="wallet__cards--2-text" id="beforeClickText1">
                         <h1 class="wallet__cards-text-2">
                             My projects
                         </h1>
                     </div>
                     <div class="wallet__cards--2-button">
-                        <a href="#" class="wallet__cards--2-button-2 btn" id="btn1">Check them out</a>
+                        <a href="#" class="wallet__cards--2-button-2 btn" id="btn1" onclick="openPopup()">Check them out</a>
                     </div>
                  </div>
                 <!--Card 3-->
                  <div class="wallet__cards--3 wallet__popup" id="beforeClick2" onclick="walletOut()">
-                    <div class="wallet__cards--3-text">
+                    <div class="wallet__cards--3-text" id="beforeClickText2">
                         <h1 class="wallet__cards-text-3">
                             My CV
                         </h1>
@@ -58,7 +58,7 @@
                 </div>
                 <!--Card 4-->
                 <div class="wallet__cards--4 wallet__popup" id="beforeClick3" onclick="walletOut()">
-                    <div class="wallet__cards--4-text">
+                    <div class="wallet__cards--4-text" id="beforeClickText3">
                         <h1 class="wallet__cards-text-4">
                             Contact me
                         </h1>
@@ -69,6 +69,41 @@
                 </div>
             </div>
         </div>
+        <!--footer with socials and copyrights-->
+    <div class="socials">
+        <div class="socials__both">
+            <div class="socials__both-git">
+                <a href="https://github.com/AleZanni" target="_blank"><img src="./img/github.jpg" alt="github" id="gitPic"></a>
+            </div>
+            <div class="socials__both-git">
+                <a href="https://www.linkedin.com/in/azanni/" target="_blank"><img src="./img/linkedin.jpg" alt="linkedin" id="linPic"></a>
+            </div>
+            <div class="copyright">
+                <span id="copyText">&copy; 2019 Alessandro Zanni</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!--popup 1-->
+<div class="darkness" id="darknessClose" onclick="closePopUp()">
+    
+</div>
+<section class="popups">
+    <div class="popup__first">
+            <div class="popup__first--up">
+                    
+            </div>
+        <div class="popup__first--down">
+        <div class="popup__first--h1">
+            <h1 class="popup__first--h1-about">About me</h1>
+        <div class="popup__first--span">
+            <span class="popup__first--span-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consequuntur quaerat earum temporibus possimus ipsum sapiente nesciunt nostrum consectetur, quod vitae autem eius quas incidunt iure dicta dolore esse voluptatum!
+            </span>
+        </div>
+        </div>
+    </div>
+    </div>
 </section>
     <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
     <script src="src/main.js"></script>

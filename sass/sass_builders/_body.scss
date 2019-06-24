@@ -12,7 +12,7 @@ html {
 
 body {
 box-sizing: border-box;
-background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), #724b1fe5), url("../img/background.jpg");
+background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), #724b1fe5), url("../../img/about.jpg");
 background-size: cover;
 height: 100vh;
 font-family: 'Lato', sans-serif;
@@ -36,24 +36,7 @@ font-family: 'Lato', sans-serif;
   transform: translatex(-1rem); }
   100% {
   opacity: 1; } }
-@keyframes moveInBottom {
- 0% {
-    opacity: 0;
-    transform: translatey(3rem); }
-  100% {
-    opacity: 1;
-    transform: translatey(0px); } }
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translatey(60rem); }
-  50% {
-    opacity:1;
-    transform: translatey(33rem);
-  }
-    100% {
-    opacity: 1;
-    transform: translatey(40rem); } }
+
 
 .header__text {
   position: absolute;
@@ -61,7 +44,7 @@ font-family: 'Lato', sans-serif;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-
+  z-index: -1;
 
 &--h1{
   font-size: 8rem;
@@ -91,10 +74,37 @@ font-family: 'Lato', sans-serif;
 }
 }
 
+
+
+#gitPic {
+  height: 5rem;
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  z-index: -1;
+}
+
+#linPic {
+  height: 7rem;
+  position: absolute;
+  bottom: 0.4%;
+  left: 6%;
+  z-index: -1;
+}
+
+#copyText {
+  position: absolute;
+  bottom: 0.4%;
+  right: 2%;
+  font-size: 2rem;
+}
+
+#gitPic:hover, #linPic:hover {
+  transform: translateY(-1rem);
+  transition: .3s;
+}
+
 .wallet {
-  animation-name: moveInBottom;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in;
 &__background {
   padding: 15rem 13rem;
   background-image: linear-gradient(to right bottom, rgba(241, 197, 114, 0.938), #582f00d9), url("../img/background.jpg");
@@ -118,8 +128,8 @@ font-family: 'Lato', sans-serif;
   &--1, &--2, &--3, &--4{
     padding: 1rem 2.5rem 1rem 2.5rem;
     border-bottom: 2px solid #000000;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     margin-top: 1.5rem;
     text-align: center;
     transition: 0.3s;
@@ -129,6 +139,7 @@ font-family: 'Lato', sans-serif;
   &-text{
     text-transform: uppercase;
     left: 40%;
+    font-size: 1.5rem;
   }
     &:hover{
     padding: 1.5rem 2.5rem 2.5rem 2.5rem;
@@ -140,8 +151,8 @@ font-family: 'Lato', sans-serif;
   #btn, #btn1, #btn2, #btn3 {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.5rem 2rem;
-    border-radius: 10rem;
+    padding: 1rem 0.5rem;
+    border-radius: 0rem;
     transition: all 0.2s;
     position: relative;
     font-size: 1.6rem;
@@ -149,19 +160,32 @@ font-family: 'Lato', sans-serif;
     cursor: pointer;
     visibility: hidden;
     display: none;
+    color: #000000;
+    background-color: rgb(187, 185, 185);
+    box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, .5);
+    
+    &:hover{
+      transform: translatey(-0.5rem);
+    }
+    &:active{
+      transform: translatey(0.5rem);
+    }
   }
 
   #cards__animation {
     padding: 9rem 7.5rem 9rem 7.5rem;
     border-bottom: none;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    animation-name: wallet__out;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    
     &:hover{
       padding: 8rem 7.5rem 8rem 7.5rem;
       cursor: auto;
       margin-top: 1.5rem;
       transform: scale(1.2);
-
       }
   }
 
@@ -175,6 +199,72 @@ font-family: 'Lato', sans-serif;
     top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
-
   }
   
+#text_margin{
+  margin-bottom: 15%;
+}
+
+@keyframes wallet__out{
+  0% {
+    transform: translateY(-15rem);
+    position: absolute;
+    left: 40%;
+  }
+
+
+ 100% {
+  transform: translateY(-15rem);
+  position: absolute;
+  left: 40%;
+ }
+}
+
+.darkness {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 10;
+}
+
+.popup__first {
+  //display: none;
+  //visibility: hidden;
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  height: 60vh;
+  width: 75%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(187, 185, 185);
+
+  &--down{
+    align-self: start;
+    margin-top: 3rem;
+  }
+  &--h1-about{
+    font-size: 3rem;text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  &--span-text{
+    font-size: 1.6rem;
+  }
+  &--up {
+height: 60vh;
+width: 75vh;
+background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), #724b1fe5), url("../../img/about.jpg");
+background-size: cover;
+background-position: center;
+clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%)
+  }
+  &--down{
+    text-align: center;
+  }
+}
+
+ 
+

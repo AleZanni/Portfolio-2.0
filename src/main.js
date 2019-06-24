@@ -37,13 +37,14 @@ counter.innerHTML = `I will turn ${diffYears} years old in ${diff} days || ${dif
 //Function for making the cards go out from the wallet and display properly
 
 function walletOut(){
+//Making the cards appear
     document.getElementById("beforeClick").id = "cards__animation";
     document.getElementById("beforeClick1").id = "cards__animation";     
     document.getElementById("beforeClick2").id = "cards__animation";     
     document.getElementById("beforeClick3").id = "cards__animation"; 
     
     document.getElementById("beforeClickMain").id = "cards__grid";
-
+//Making the buttons appear
     document.getElementById("btn").style.visibility = "visible";
     document.getElementById("btn").style.display = "block";
 
@@ -55,6 +56,13 @@ function walletOut(){
 
     document.getElementById("btn3").style.visibility = "visible";
     document.getElementById("btn3").style.display = "block";
+//Centering the text
+    document.getElementById("beforeClickText").id = "text_margin";
+    document.getElementById("beforeClickText1").id = "text_margin";
+    document.getElementById("beforeClickText2").id = "text_margin";
+    document.getElementById("beforeClickText3").id = "text_margin";
+
 
     console.log('click');
 }
+
