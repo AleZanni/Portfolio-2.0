@@ -12,62 +12,67 @@
 <!--Introduction text-->
 <section class="section-header">
     <div class="header__text">
-    <h1 class="header__text--h1">Welcome</h1>
+    <h1 class="header__text--h1" id="testing">Welcome</h1>
     <p class="header__text--p">I am Alessandro Zanni, Italian living in Pori, Finland.<br><span id='age'></span></p>
     </div>
 </section>
 <!--Wallet with cards-->
 <section class="section-wallet">
-    <div class="wallet">
+    <div class="wallet" id="fullWallet">
         <div class="wallet__background">
             
         </div>
             <div class="wallet__cards" id="beforeClickMain">
                 <!--Card 1-->
-                <div class="wallet__cards--1 wallet__popup" id="beforeClick" onclick="walletOut()">
+                <div class="wallet__cards--1 wallet__popup" id="beforeClick">
                     <div class="wallet__cards--1-text" id="beforeClickText">
-                        <h1 class="wallet__cards--1-text-1">
+                        <h1 class="wallet__cards--1-text-1" onclick="walletOut()">
                         About me
                         </h1>
                     </div>
                     <div class="wallet__cards--1-button">
-                        <a href="#" class="wallet__cards--1-button-1 btn" id="btn">See more</a>
+                        <a href="#" class="wallet__cards--1-button-1 btn" id="btn" onclick="closeCards(); openPopUpAbout();">See more</a>
                     </div>
                 </div>
+
+                
                 <!--Card 2-->
-                <div class="wallet__cards--2 wallet__popup" id="beforeClick1" onclick="walletOut()">
+                <div class="wallet__cards--2 wallet__popup" id="beforeClick1">
                     <div class="wallet__cards--2-text" id="beforeClickText1">
-                        <h1 class="wallet__cards-text-2">
+                        <h1 class="wallet__cards-text-2" onclick="walletOut()">
                             My projects
                         </h1>
                     </div>
                     <div class="wallet__cards--2-button">
-                        <a href="#" class="wallet__cards--2-button-2 btn" id="btn1" onclick="openPopup()">Check them out</a>
+                        <a href="#" class="wallet__cards--2-button-2 btn" id="btn1" onclick="closeCards(); openPopUpMyProjects();">Check them out</a>
                     </div>
                  </div>
+
                 <!--Card 3-->
-                 <div class="wallet__cards--3 wallet__popup" id="beforeClick2" onclick="walletOut()">
+                 <div class="wallet__cards--3 wallet__popup" id="beforeClick2">
                     <div class="wallet__cards--3-text" id="beforeClickText2">
-                        <h1 class="wallet__cards-text-3">
+                        <h1 class="wallet__cards-text-3" onclick="walletOut()">
                             My CV
                         </h1>
                     </div>
                     <div class="wallet__cards--3-button">
-                        <a href="#" class="wallet__cards--3-button-3 btn" id="btn2">Download my CV</a>
+                        <a href="img/Alessandro Zanni_CV_2019.pdf" class="wallet__cards--3-button-3 btn" id="btn2" download>Download my CV</a>
                     </div>
                 </div>
+
                 <!--Card 4-->
-                <div class="wallet__cards--4 wallet__popup" id="beforeClick3" onclick="walletOut()">
+                <div class="wallet__cards--4 wallet__popup" id="beforeClick3">
                     <div class="wallet__cards--4-text" id="beforeClickText3">
-                        <h1 class="wallet__cards-text-4">
+                        <h1 class="wallet__cards-text-4" onclick="walletOut()">
                             Contact me
                         </h1>
                     </div>
                     <div class="wallet__cards--4-button">
-                        <a href="#" class="wallet__cards--4-button-4 btn" id="btn3">See my contacts</a>
+                        <a href="#" class="wallet__cards--4-button-4 btn" id="btn3" onclick="closeCards(); openPopupContactMe()">See my contacts</a>
                     </div>
-                </div>
             </div>
+
+                </div>
         </div>
         <!--footer with socials and copyrights-->
     <div class="socials">
@@ -84,26 +89,152 @@
         </div>
     </div>
 </section>
+
+<!--dark background-->
+<section id="PopupOpen">
+<div id="darknessClose" onclick="closePopup()"></div>
+
 <!--popup 1-->
-<div class="darkness" id="darknessClose" onclick="closePopUp()">
-    
-</div>
 <section class="popups">
-    <div class="popup__first">
-            <div class="popup__first--up">
+    <div id="popupFirst"> 
+            <div id="popupFirstUp">
                     
             </div>
-        <div class="popup__first--down">
+        <div id="popupFirstDown">
         <div class="popup__first--h1">
-            <h1 class="popup__first--h1-about">About me</h1>
+            <h1 class="popup__first--h1-about" id="h1About">About me</h1>
         <div class="popup__first--span">
-            <span class="popup__first--span-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consequuntur quaerat earum temporibus possimus ipsum sapiente nesciunt nostrum consectetur, quod vitae autem eius quas incidunt iure dicta dolore esse voluptatum!
+            <span class="popup__first--span-text" id="spanAbout">
+                Nice to meet you and thanks for visiting my website! <br> <br>
+                I am Alessandro Zanni, I was born in Clusone, Italy a little city on the Alps, in 1992. Nowadays, I am living in Hämeenlinna, Finland and I am a computer application student. <br> My passions include web development, programming, running and cooking. <br> <br> At the moment I am focused on: html5, CSS3, SASS/SCSS, JavaScript (ES5, ES6+), Node.JS, Postman, MongoDB. <br> <br> My passwords are: devotion, kindness, professionalism <br>
+
             </span>
         </div>
+        <div class="popup__first--h1-download">
+            <a href="img/Alessandro Zanni_CV_2019.pdf" class="popupThirdBtn" id="popupBtn" download>Download my CV</a>
+        </div>
         </div>
     </div>
     </div>
+
+<!--popup 2-->
+        <div id="popupSecond">
+                <div id="popupSecondUp">
+                    <h1 class="popupSecondUp__hide">test</h1>
+                    </div>
+                <div class="popupSecondDown">
+            <div class="popupSecond__header" id="popupSecHead">
+                <h1 class="popupSecond__header--text" id="popupSecHeadText">My projects</h1>
+            </div>
+        <div id="popupSecond__first" class="popupSecond__first">
+            <div class="popupSecond__first--pic1" id="projectPic1">
+                <a href="./Dice_Game-master/index.html" target="_blank"><img src="./img/dice.png" alt="dice" class="popupSecond__first--pic1-img" id="projectPic1Img"></a>
+            </div>
+        <div class="popupSecond__first--text1" id="projectText1">
+            <p class="popupSecond__first--text1-p" id="projectTextP1">
+            </p>
+        </div>
+    </div>
+    <div id="popupSecond__second" class="popupSecond__class2">
+        <div class="popupSecond__second--pic2" id="projectPic2">
+            <a href="./Naturos/index.html" target="_blank"><img src="./img/naturos.png" alt="nature" class="popupSecond__second--pic2-img" id="projectPic2Img"></a>
+        </div>
+    <div class="popupSecond__second--text2" id="projectText2">
+        <p class="popupSecond__second--text2-p" id="projectTextP2">
+            Website developed using SCSS, purely focused on the UI (Completely responsive)
+        </p>
+    </div>
+</div>
+<div id="popupSecond__third" class="popupSecond__class3">
+    <div class="popupSecond__third--pic3" id="projectPic3">
+        <a href="https://zanni-weather-app.herokuapp.com/" target="_blank"><img src="./img/weather.png" alt="weather" class="popupSecond__third--pic3-img" id="projectPic3Img"></a>
+    </div>
+<div class="popupSecond__third--text3" id="projectText3">
+    <p class="popupSecond__third--text3-p" id="projectTextP3">
+        Weather forecast website developed using Node.JS. I used Dark Sky and Mapbox APIs (responsive, but focused on the backend side)
+    </p>
+</div>
+</div>
+<div id="popupSecond__sixth" class="popupSecond__class6">
+    <div class="popupSecond__sixth--pic6" id="projectPic6">
+        <a href="./Memory_game/index.html" target="_blank"><img src="./img/memory.png" alt="memory" class="popupSecond__sixth--pic6-img" id="projectPic6Img"></a>
+    </div>
+<div class="popupSecond__sixth--text6" id="projectText6">
+    <p class="popupSecond__sixth--text6-p" id="projectTextP6">
+        Memory game developed using JavaScript (only for desktop)
+    </p>
+</div>
+</div>
+<div id="popupSecond__fourth" class="popupSecond__class4">
+    <div class="popupSecond__fourth--pic4" id="projectPic4">
+        <a href="https://codepen.io/MorningEspresso/" target="_blank"><img src="./img/codepen.png" alt="codepen" class="popupSecond__fourth--pic4-img" id="projectPic4Img"></a>
+    </div>
+<div class="popupSecond__fourth--text4" id="projectText4">
+    <p class="popupSecond__fourth--text4-p" id="projectTextP4">
+        Here you can check out my pens
+    </p>
+</div>
+</div>
+<div id="popupSecond__fifth" class="popupSecond__class5">
+    <div class="popupSecond__fifth--pic5" id="projectPic5">
+        <a href="https://github.com/AleZanni" target="_blank"><img src="./img/github.jpg" alt="github" class="popupSecond__fifth--pic5-img" id="projectPic5Img"></a>
+    </div>
+<div class="popupSecond__fifth--text5" id="projectText5">
+    <p class="popupSecond__fifth--text5-p" id="projectTextP5">
+        Most of my projects are store in my GitHub, check them out!
+    </p>
+</div>
+</div>
+</div>
+</div>
+<!--popup 3-->
+
+
+<!--popup4--> 
+<div id="popupFourth" class="">
+    <div id="popupFourthUpGrid">
+            <h1 class="popupFourthUp__hide">test</h1>
+            </div>
+     <div class="popupFourthDown">
+    <div id="popupFourthUp" class="popupSecond__fourth--up">
+             <h1 id="popupFourthUp__text">Let's get in touch</h1>       
+        </div>
+    <div class="popupSecond__fourth--down">
+    <div id="popupSecond__fourth" class="popupSecond__fourth">
+        <div id='popupSecond__fourth--content'>
+             <a href='callto://+358414994078' title='Call me' id="popup4__text--1">
+               <img src='./img/call.svg' alt='phoneLogo' class="popup4__img" id="popup4__img--1">
+               <p class="popup4__text" >+358 414994078</p>
+              </a>
+        </div>
+    </div>
+    <div id="popupSecond__fourth--1" class="popupSecond__fourth--1" >
+        <div id='popupSecond__fourth--content1'>
+            <a href='mailto://ale.zanni1992@gmail.com' title='email me' id="popup4__text--2">
+                <img src='./img/gmail.svg' alt='email logo' class="popup4__img" id="popup4__img--2">
+                <p class="popup4__text">ale.zanni1992@gmail.com</p>
+            </a>
+        </div>
+    </div>
+    <div id="popupSecond__fourth--2" class="popupSecond__fourth--2">
+        <div id='popupSecond__fourth--content2'>
+            <a href='https://www.linkedin.com/in/azanni/' title='Linkedin' id="popup4__text--3">
+                <img src='./img/linkedin.jpg' alt='Linkedin' class="popup4__img" id="popup4__img--3">
+                <p class="popup4__text">Alessandro Zanni</p>
+            </a>
+        </div>
+    </div>
+    <div id="popupSecond__fourth--3" class="popupSecond__fourth--3">
+        <div id='popupSecond__fourth--content3'>
+            <a href='https://twitter.com/ale_zanni_92' title='Twitter' target="_blank" id="popup4__text--4">
+                <img src='./img/twitter.svg' alt='Twitter' class="popup4__img" id="popup4__img--4">
+                <p class="popup4__text">@ale_zanni_92</p>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 </section>
     <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
     <script src="src/main.js"></script>
