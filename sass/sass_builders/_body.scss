@@ -67,6 +67,16 @@ overflow: hidden;
 }
 }  
 
+.loading {
+  display: none;
+  background-color: brown;
+  height: 100vh;
+  width:  100%;
+  z-index: 999999999999999999999999999999999999999;
+}
+
+
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -314,12 +324,16 @@ overflow: hidden;
 }
 }
 
+
+
 #copyText {
   position: absolute;
   bottom: 0.4%;
   right: 2%;
   font-size: 2rem;
   @include respond(phone){
+    display: none;
+    visibility: hidden;
     font-size: 1.5rem;
     right: 12%;
   }
@@ -502,7 +516,9 @@ overflow: hidden;
   }
 
   .cards__grid {
+    display:-ms-grid;
     display: inline-grid;
+    -ms-grid-columns:  22% 22% 22% 22%;
     grid-template-columns: 22% 22% 22% 22%;
     justify-content: space-evenly;
     width: 100%;
@@ -595,11 +611,7 @@ overflow: hidden;
 
 .popups{
   @include respond(phone){
-  margin-top: 12rem;
-  margin-bottom: 10rem;
-  display: grid;
-  justify-content: start;
-  grid-gap: 5rem;
+  display: block;
   }
 }
 
@@ -628,7 +640,9 @@ overflow: hidden;
 }
 
 .popup__first {
+  display:-ms-grid;
   display: inline-grid;
+  -ms-grid-columns: 50% 50%;
   grid-template-columns: 50% 50%;
   height: 60vh;
   width: 75%;
@@ -648,6 +662,7 @@ overflow: hidden;
     position: relative;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 4px 50px 19px 10px rgba(0,0,0,0.13); 
     box-shadow: 2px 10px 8px 0px #000000, 4px 50px 19px 10px rgba(0,0,0,0.13);
+    -ms-grid-columns: 20% 70%;
     grid-template-columns: 20% 70%;
     justify-content: start;
     align-items: center;
@@ -656,6 +671,9 @@ overflow: hidden;
     -moz-animation: none;
     -o-animation:  none;
     animation: none;
+    margin-top: 40rem;
+    margin-bottom: 0rem;
+
   }
 
   &--h1{
@@ -837,9 +855,12 @@ background-position: center;
   color: #fff;
   line-height: 2.5rem;
   @include respond(phone){
+  display:-ms-grid;
   display: inline-grid;
   position: relative;
+  -ms-grid-columns: 10% 90%;
   grid-template-columns: 10% 90%;
+  -ms-grid-rows:  initial;
   grid-template-rows: initial;
   text-align: center;
   overflow: initial;
@@ -850,19 +871,26 @@ background-position: center;
   -moz-animation: none;
   -o-animation:  none;
   animation: none;
+  margin-bottom: 15rem;
   }
 }
 
 .popupSecondDown{
+  display:-ms-grid;
   display: grid;
+  -ms-grid-columns: 50% 50%;
   grid-template-columns: 50% 50%;
+  -ms-grid-rows: 40% 30% 20%;
   grid-template-rows: 40% 30% 20%;
   justify-content: center;
   align-items: center;
   height: 100%;
   @include respond(phone){
+  display:-ms-grid;
   display: grid;
+  -ms-grid-columns: 100%;
   grid-template-columns: 100%;
+  -ms-grid-rows: initial;
   grid-template-rows: initial;
   grid-gap: 2rem;
   }
@@ -933,6 +961,7 @@ clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
 .popupSecond__first, .popupSecond__class2, .popupSecond__class3, .popupSecond__class6, .popupSecond__class4, .popupSecond__class5 { 
   margin-left: 10%;
   display: none;
+  -ms-grid-columns: 20% 70%;
   grid-template-columns: 20% 70%;
   justify-content: center;
   align-items: center;
@@ -956,7 +985,9 @@ margin-left: 1.5rem;
 
 
 .popup__fourth {
+  display:-ms-grid;
   display: inline-grid;
+  -ms-grid-rows:  40% 50%;
   grid-template-rows: 40% 50%;
   height: 60vh;
   width: 75%;
@@ -992,6 +1023,7 @@ background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), r
 }
 .popupFourthDown{
   @include respond(phone){
+    display:-ms-grid;
     display: inline-grid;
     position: relative;
     height: initial;
@@ -1004,9 +1036,12 @@ background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), r
   @include respond(phone){
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 4px 50px 19px 10px rgba(0,0,0,0.13); 
     box-shadow: 2px 10px 8px 0px #000000, 4px 50px 19px 10px rgba(0,0,0,0.13);
+    display:-ms-grid;
     display: inline-grid;
     position: relative;
+    -ms-grid-columns: 10% 90%;
     grid-template-columns: 10% 90%;
+    -ms-grid-rows:  initial;
     grid-template-rows: initial;
     text-align: center;
     overflow: initial;
@@ -1016,6 +1051,8 @@ background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), r
   }
 }
 #popupFourthUpGrid {
+  background-image: none;
+  @include respond(phone){
   background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), rgba(114, 75, 31, 0.898)), url("../img/about.jpg");
   height: 100%;
   width: 5vh;
@@ -1023,6 +1060,7 @@ background-image: linear-gradient(to right bottom, rgba(184, 140, 105, 0.938), r
 background-position: center;
 -webkit-clip-path: polygon(0 0, 100% 0, 0% 100%, 0 100%);
 clip-path: polygon(0 0, 100% 0, 0% 100%, 0 100%);
+}
 }
 .popupSecond__fourth--up {
 display: none;
@@ -1061,20 +1099,25 @@ margin-top: -8rem;
 .popupSecond__fourth--down {
 display: none;
 visibility: hidden;
+-ms-grid-columns: 20% 20% 20% 20%;
 grid-template-columns: 20% 20% 20% 20%;
 justify-content: center;
 align-items: center;
 grid-gap: 7rem;
 margin-bottom: 8rem;
 @include respond(tab-land){
+  -ms-grid-rows:  40% 40%;
   grid-template-rows: 40% 40%;
+  -ms-grid-columns: 40% 40%;
   grid-template-columns: 40% 40%;
   grid-gap: 3.5rem;
   justify-content: center;
 
   }
   @include respond(phone){
+  -ms-grid-columns: 100%;
   grid-template-columns: 100%;
+  -ms-grid-rows:  15% 15% 15% 15%;
   grid-template-rows: 15% 15% 15% 15%;
   grid-gap: 4rem;
   margin-top: 0rem;
